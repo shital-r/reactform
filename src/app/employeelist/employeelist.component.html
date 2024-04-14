@@ -1,0 +1,45 @@
+<app-createemployeelist [acount]="Acount" [jcount]="Jcount" [empcount]="allempcount"
+    (emitradio)="getdataFromChild($event)"></app-createemployeelist>
+
+<br><br><br>
+<h3>employeelist table!</h3>
+<!-- <table>
+    <thead>
+        <tr>
+            <th>empname</th>
+            <th>designation</th>
+            <th>salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of employeelist">
+            <td>{{item.empname}}</td>
+            <td>{{item.designation}}</td>
+            <td>{{item.salary}}</td>
+
+        </tr>
+    </tbody>
+</table> -->
+
+<table class="table table-dark table-striped">
+<!-- <table class="table-primary"> -->
+
+    <thead>
+        <tr>
+            <th>empname</th>
+            <th>designation</th>
+            <th>salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-primary" *ngFor="let item of filtertable">
+            <!-- <tr class="table-primary" *ngfor="let item of filtertable"> -->
+
+            <td>{{item.empname}}</td>
+            <td>{{item.designation}}</td>
+            <td>{{item.salary}}</td>
+        </tr>
+    </tbody>
+</table>
+
+

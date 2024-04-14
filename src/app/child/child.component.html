@@ -1,0 +1,15 @@
+<!-- <h3>productlist from paernt:{{productlistfromparent}}</h3>
+<h3>productlist from child:{{productlistfromchild}}</h3>
+<select name="product" id="id2" [(ngModel)]="productlistfromchild">
+    <option value="1">mobile</option>
+    <option value="2">tv</option>
+    <option value="3">iphone</option>
+
+</select>
+<button (click)="sendproductlist()">send</button> -->
+
+<div class="text-center">
+    <!-- <h5>{{selectproduct}}</h5> -->
+    <p>{{selectproduct}} is selected</p>
+    <button  #selproduct (click)="onAddcart(selproduct)">add to cart</button>
+</div>

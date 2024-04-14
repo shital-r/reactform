@@ -1,0 +1,22 @@
+<h3>create-product works!</h3>
+
+<div>
+    <h3>create-product</h3>
+    <form action="">
+        <div>
+            productName: <input type="text" name="pname" [(ngModel)]="productobj.productname">
+        </div>
+        <br>
+        <div> 
+           Quantity: <input type="number" name="qunatity" [(ngModel)]="productobj.quantity">
+        </div>
+<br>
+        <div>
+            Price: <input type="number" name="price" [(ngModel)]="productobj.price">
+
+        </div>
+    <button (click)="createproductdata()">create-product</button>
+
+    <button (click)="resetdata()">reset</button>
+    </form>
+</div>

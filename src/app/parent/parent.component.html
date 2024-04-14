@@ -1,0 +1,36 @@
+<!-- <h3>productlist:{{productlist}}</h3>
+<select name="product" id="id1" [(ngModel)]="productlist">
+    <option value="1">mobile</option>
+    <option value="2">tv</option>
+    <option value="3">iphone</option>
+
+</select>
+<h3>received data:{{receiveddata}}</h3> -->
+<!-- <app-child [productlistfromparent]="productlist" (emitproduct)="getproductlist($event)"></app-child> -->
+
+
+<div class="container text-center mt-5 border w-50">
+    <h3>Buy products</h3>
+<div class="row w-50 text-center">
+ <div class=" card col-md-4">
+        <h5>Laptop</h5>
+        <button class="btn btn-success"  (click)="onSelectproduct('laptop')">select product</button>
+ </div>
+<div class="card col-md-4" >
+    <h5>TV</h5>
+    <button class="btn btn-success" (click)="onSelectproduct('TV')">select product</button>
+</div>
+<div class="card col-md-4">
+    <h5>Mobile</h5>
+    <button class="btn btn-success" (click)="onSelectproduct('mobile')">select product</button>
+
+</div>
+</div>
+</div>
+<h5>{{productFromchild}}</h5>
+<h3>{{addPro}}added in cart</h3>
+
+<app-child [selectproduct]="selectedproduct" (addproduct)="getproduct($event)" [selectproduct]="addPro"></app-child>
+
+
+

@@ -1,0 +1,48 @@
+<h3>createemployeelist works!</h3>
+
+
+
+<!-- <div *ngIf="option == 'angular developer'; else elseblock">
+    <label for="angular developer">angular developer:</label>
+<input type="text" id="angular developer">
+</div>
+<ng-template #elseblock>
+    <label for="java">java developer:</label>
+    <input type="text" id="java">
+</ng-template> -->
+
+<!-- 
+<form action="">
+    <div>
+        <label for="id1">empname:</label>
+        <input type="text" id="id1" name="empname" [(ngModel)]="empobj.empname">
+    </div>
+    <br>
+    <div>
+        <label for="id2">designation:</label>
+        <input type="text" id="id2" name="designation" [(ngModel)]="empobj.designation">
+    </div>
+    <br>
+    <div>
+        <label for="id3">salary:</label>
+        <input type="number" id="id3" name="salary" [(ngModel)]="empobj.salary">
+    </div>
+<br>
+    <button (click)="createEmpdata()">createEmp</button>
+
+<button (click)="clear()">clear</button>
+</form> -->
+
+<h1>Reactive form Example</h1>
+<button>Add user</button>
+
+<input class="form-check-input" type="radio" name="select" value="Angular Developer" id="id4" [(ngModel)]="selectdesig"
+    (change)="onselect()">
+<label class="form-check-label" for="id4">Angular Developer</label>&nbsp;({{acount}})
+
+<input class="form-check-input" type="radio" name="select" value="Java Developer" id="id4" [(ngModel)]="selectdesig"
+    (change)="onselect()">
+<label class="form-check-label" for="id4">Java Developer</label>&nbsp;({{jcount}})
+<input class="form-check-input" type="radio" name="select" value="all" id="id4" [(ngModel)]="selectdesig"
+    (change)="onselect()">
+<label class="form-check-label" for="id4">allempcount</label>&nbsp;({{empcount}})

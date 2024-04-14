@@ -1,0 +1,49 @@
+<p>parent-mobile-radio works!</p>
+
+<input type="radio" name="contact" value="mobile no" id="id1" [(ngModel)]="option">&nbsp;
+<label for="id1"> mobile no</label>
+&nbsp;
+<input type="radio" name="contact" value="email" id="id2" [(ngModel)]="option">&nbsp;
+<label for="id2">email</label>
+<br>
+<div *ngIf="option=='mobile no';else elseblock1">
+<input type="text" name="contact" value="mobile no" id="id3">
+<!-- <label for="id3">mobile no</label> -->
+</div>
+<ng-template #elseblock1>
+    <input type="text" name="contact" value="email" id="id4">
+<!-- <label for="id4">email</label> -->
+</ng-template>
+<br><hr>
+
+<h3>gender select:</h3>
+<input type="radio" name="gender" value="male" id="id5" [(ngModel)]="gender">
+<label for="id5">male</label>&nbsp;
+<input type="radio" name="gender" value="female" id="id6" [(ngModel)]="gender">
+<label for="id6">female</label>
+<br>
+<div *ngIf="gender=='male';else elseblock2" >
+    <input type="text" id="id7">
+    <label for="id7">male</label>
+</div>
+<ng-template #elseblock2>
+    <input type="text" name="gender" id="id8">
+    <label for="id8">female</label>
+</ng-template>
+
+<h3>laguage select:</h3>
+<input type="checkbox" name="language" value="marathi" id="id9" [(ngModel)]="language">
+<label for="id9">marathi</label>
+<input type="checkbox" name="language" value="hindi" id="id11" [(ngModel)]="language">
+<label for="id11">hindi</label>
+<br>
+<!-- two checkbox select when we select one -->
+<div *ngIf="language=='marathi';else elseblock3" >
+    <input type="text" name="language" id="id12">  
+    <label for="id12">marathi</label>
+</div>
+<ng-template #elseblock3>
+    <input type="text" name="language" id="id13">
+    <label for="id13">hindi</label>
+</ng-template>
+

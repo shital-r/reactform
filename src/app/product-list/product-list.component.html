@@ -1,0 +1,22 @@
+<h2 class="container w-50">product-list Table!</h2>
+<div>
+    <table class=" table table-dark">
+        <thead>
+            <tr>
+                <!-- <th>Product Id</th> -->
+                <th>Product Name</th>
+                <th>Product Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-primary" *ngFor="let item of productlist;">
+                <td>{{item.productname}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-create-product (emitproductdata)="getCreateProductdata($event)"></app-create-product>
